@@ -7,3 +7,6 @@ author_counts = df['Author'].value_counts()
 print(author_counts)
 avg_rating_by_genre = df.groupby("Genre")["Rating"].mean()
 print(avg_rating_by_genre)
+
+author_counts.head(10).to_csv("top_authors.csv")
+avg_rating_by_genre.to_csv("avg_rating_by_genre.csv")
